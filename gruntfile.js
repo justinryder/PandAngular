@@ -47,25 +47,7 @@ module.exports = function(grunt){
                 },
                 files: {
                     'app/js/app.js': [
-
-                        'src/js/portfolioApp.js',
-
-                        'src/js/controllers/HeaderController.js',
-                        'src/js/directives/siteHeader.js',
-
-                        'src/js/controllers/HomeController.js',
-
-                        'src/js/controllers/MenuController.js',
-                        'src/js/controllers/AboutController.js',
-                        'src/js/controllers/EducationController.js',
-                        'src/js/controllers/ProjectsController.js',
-                        'src/js/controllers/ProjectController.js',
-                        'src/js/controllers/ResumeController.js',
-
-                        'src/js/directives/resumeJobSummary.js',
-                        'src/js/directives/semesterClassSummary.js',
-                        'src/js/directives/experienceSummary.js',
-                        'src/js/directives/linkOrSpan.js'
+                        'src/js/app.js'
                     ]
                 }
             }
