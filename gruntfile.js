@@ -5,23 +5,38 @@ module.exports = function(grunt){
         watch: {
             compass: {
                 files: ['src/sass/**/*.{scss,sass}'],
-                tasks: ['compass:dev']
+                tasks: ['compass:dev'],
+                options: {
+                    livereload: true
+                }
             },
             html: {
                 files: ['src/**/*.html'],
-                tasks: ['copy:html']
+                tasks: ['copy:html'],
+                options: {
+                    livereload: true
+                }
             },
             images: {
                 files: ['src/images/**/*'],
-                tasks: ['copy:images']
+                tasks: ['copy:images'],
+                options: {
+                    livereload: true
+                }
             },
             js: {
                 files: ['src/js/**/*.js'],
-                tasks: ['uglify']
+                tasks: ['uglify'],
+                options: {
+                    livereload: true
+                }
             },
             json: {
                 files: ['src/json/**/*.json'],
-                tasks: ['copy:json']
+                tasks: ['copy:json'],
+                options: {
+                    livereload: true
+                }
             }
         },
         compass: {
