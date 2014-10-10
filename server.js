@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
+var path = require('path');
 
-var appDirectory = __dirname + '\\app';
+var appDirectory = path.join(__dirname, 'app');
 app.use(express.static(appDirectory));
 console.log('server using static ' + appDirectory);
 
