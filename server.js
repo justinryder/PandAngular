@@ -11,8 +11,13 @@ var port = process.env.PORT || 3000;
 app.listen(port);
 console.log('server listening on port ' + port);
 
-var dbPath = 'mongodb://localhost/panda-stats';
-mongoose.connect(dbPath);
+var dbUser = 'stinkypanda';
+var dbPassword = 'peeyou';
+var dbPath = 'mongodb://ds041380.mongolab.com:41380/panda-stats';
+mongoose.connect(dbPath, {
+  user: dbUser,
+  pass: dbPassword
+});
 var db = mongoose.connection;
 db.on('error', function(){
   console.error('error connecting to ' + dbPath);
@@ -20,3 +25,13 @@ db.on('error', function(){
 db.on('open', function(){
   console.log('connected to ' + dbPath);
 });
+
+function cleanup(){
+  console.log('close command received. disconnecting from db...');
+  mongoose.connection.close(function(){
+    console.log('db connection has been closed. exiting...');
+    process.exit(0);
+  });
+}
+
+process.on('SIGINT', cleanup).on('SIGTERM', cleanup);
