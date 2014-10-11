@@ -10,6 +10,27 @@
 
 		<div ng-controller="controlsController">
 			<graph id="graph-main" chart="chart" data="data"></graph>
+      <div class="controls"
+        ng-controller="controlsController">
+        <div id="graph-main" chart="chart" graph></div>
+        <div class="graph-menu">
+          <ul>
+            <li class="data-point">
+              <span class="data-point-checkbox">
+                <i class="fa fa-check"></i>
+                <label class="data-point-text">Data Point</label>
+              </span>
+              <span class="data-point-line-type">
+                <select>
+                  <option value="foo">foo</option>
+                  <option value="bar">bar</option>
+                </select>
+                <span class="data-point-text">Update line type</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
 		</div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
