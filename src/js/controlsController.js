@@ -10,7 +10,7 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     }
     refreshChartData();
   });
-  
+
   $scope.data = {
     x: 'x',
     columns: [
@@ -26,7 +26,7 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
       windSolar,
       btuTotal,
       mwTotal;
-  
+
   $scope.events = {
     Solar: [],
     Wind: []
@@ -54,7 +54,14 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
         $scope.proposedEvent.year,
         $scope.proposedEvent.location,
         true);
+  };
 
+  $scope.addProject = function(powerType, btuDelta, date, location, name) {
+    addEvent(powerType, btuDelta,
+        date,
+        location,
+        name,
+        true);
   };
 
   $http.get('json/productionData.json').success(function(data){
@@ -70,12 +77,13 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   });
 
   function addPlannedEvents() {
-    addEvent('Solar', 1, 2023, 'Richmond', false);
-    addEvent('Wind', 6, 2017, 'Middlebury');
+    addEvent('Solar', 1, 2023, 'Richmond', 'Super Solar', false);
+    addEvent('Wind', 6, 2017, 'Middlebury', 'Epic Winds');
   }
 
-  function addEvent(powerType, btuDelta, date, location, shouldRefresh){
+  function addEvent(powerType, btuDelta, date, location, name, shouldRefresh){
     var e = {
+      name: name,
       type: powerType,
       btuDelta: btuDelta,
       date: date,

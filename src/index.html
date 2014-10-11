@@ -12,7 +12,7 @@
 
 		<div ng-controller="controlsController" class="controls">
 			<div id="graph-main" chart="chart" data="data" graph></div>
-      <div chart="chart" data="data" menu>
+      <!-- <div >
         <div class="row">
           <div class="small-6 columns">
             <div class="panel">
@@ -49,9 +49,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="projects">
+      <div class="projects" chart="chart" data="data" menu>
         <section class="projects-existing">
           <h2>Active Energy Projects</h2>
           <ul>
@@ -83,13 +83,13 @@
 
               <dl>
                 <dt>Location</dt>
-                <dd>{{ event.location }}</dd>
+                <dd>Deerfield</dd>
                 <dt>Power Generated</dt>
-                <dd>{{ event.btuDelta }}</dd>
+                <dd>30 mwh</dd>
                 <dt>Year</dt>
-                <dd>{{ event.date }}</dd>
+                <dd>2015</dd>
               </dl>
-              <button>Show In Projection</button>
+              <button ng-click="addProject('Wind', 1/30, 2015, 'Deerfield Wind')">Show In Projection</button>
             </li>
             <li class="project">
               <h3>TriLand Williamstown Soloar Farm</h3>
@@ -108,7 +108,7 @@
       </div>
 		</div>
 
-    <div class="row" style="margin-top: 100vh;   ">
+    <div class="row" style="margin-top: 100vh;">
         <h2>How It Works</h2>
         <blockquote>
             <h3>1</h3>
