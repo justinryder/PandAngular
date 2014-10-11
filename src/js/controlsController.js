@@ -1,5 +1,5 @@
 app.controller('controlsController', ['$scope', '$http', function($scope, $http) {
-  $scope.types = ['line', 'spline', 'step', 'area', 'area-line', 'area-spline', 'area-step'];
+  $scope.types = ['line', 'spline', 'step', 'area', 'area-spline', 'area-step'];
   $scope.type = $scope.types[0];
 
   $scope.$watch(function(scope){
