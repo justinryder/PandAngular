@@ -37,27 +37,22 @@
                   <form>
                     <label>Year:</label>
                     <input type="number" min="{{minYear}}" max="{{maxYear}}"
-                      ng-model="proposedProjectYear">
+                      ng-model="proposedEvent.year">
                     <label>Location</label>
-                    <input ng-model="proposedProjectLocation" type="text">
+                    <input ng-model="proposedEvent.location" type="text">
                     <button class="button"
-                    ng-click="saveProject()">Wind</button>
+                    ng-click="saveProject('Wind')">Approve</button>
                   </form>
                 </div>
                 <div class="content" id="panel2">
-                  <button class="button">Solar</button>
                   <form>
-                    Year:
-                    <input type="range" min="1" max="5">
-                    <input type="text">
-                  </form>
-                </div>
-                <div class="content" id="panel3">
-                  <button class="button">Nuclear</button>
-                  <form>
-                    Year:
-                    <input type="range" min="1" max="5">
-                    <input type="text">
+                    <label>Year:</label>
+                    <input type="number" min="{{minYear}}" max="{{maxYear}}"
+                      ng-model="proposedEvent.year">
+                    <label>Location</label>
+                    <input ng-model="proposedEvent.location" type="text">
+                    <button class="button"
+                    ng-click="saveProject('Solar')">Solar</button>
                   </form>
                 </div>
               </div>
