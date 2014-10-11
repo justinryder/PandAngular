@@ -4,9 +4,9 @@ body {
 
 header {
   padding: 1rem;
-  color: nth($colors, 5) !important;
 
   h1 {
+    color: nth($colors, 5) !important;
     margin-top: 1rem;
     text-align: center;
   }

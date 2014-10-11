@@ -9,7 +9,7 @@
     <header>
       <h1><i class="fa fa-area-chart"></i>Pan-dAng-ular</h1>
     </header>
-  
+
 		<div ng-controller="controlsController" class="controls">
 			<div id="graph-main" chart="chart" data="data" graph></div>
       <div chart="chart" data="data" menu>
@@ -36,7 +36,7 @@
                 <div class="content active" id="panel1">
                   <form>
                     <label>Year:</label>
-                    <input type="number" min="{{minYear}}" max="{{maxYear}}" 
+                    <input type="number" min="{{minYear}}" max="{{maxYear}}"
                       ng-model="proposedProjectYear">
                     <label>Location</label>
                     <input ng-model="proposedProjectLocation" type="text">
@@ -64,6 +64,46 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="projects">
+        <section class="projects-existing">
+          <h2>Active Energy Projects</h2>
+          <ul>
+            <li class="project">
+              <h3>Super Solar</h3>
+              <p>Super Solar implements the latest in PV technology to provide great returns on cost.</p>
+              <dl>
+                <dt>Cost</dt>
+                <dd>$1.4 BB</dd>
+                <dt>Est. Output/Return</dt>
+                <dd>1652 Kwh</dd>
+                <dt>Est. Completion</dt>
+                <dd>2016</dd>
+                <dt>Derptest</dt>
+              </dl>
+            </li>
+          </ul>
+        </section>
+
+        <section class="projects-projected">
+          <h2>Potential Enery Projects</h2>
+          <ul>
+            <li class="project">
+              <h3>Epic Winds</h3>
+              <p>Epic winds implements the latest in floating wind turbine for deployments up and down the Lake Champlain.</p>
+              <dl>
+                <dt>Cost</dt>
+                <dd>$150 MM</dd>
+                <dt>Est. Output/Return</dt>
+                <dd>543 Kwh</dd>
+                <dt>Est. Completion</dt>
+                <dd>2016</dd>
+              </dl>
+              <button>Show In Projection</button>
+            </li>
+          </ul>
+        </section>
       </div>
 		</div>
 
