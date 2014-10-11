@@ -27,7 +27,7 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
 
   function loadRawData(source){
     $http.get('/api/collections/raw?take=100&query=' + JSON.stringify({ Source: source })).success(function(data){
-      addDetailedClientDataSet(source, data, 'line');
+      addDetailedClientDataSet(source, data, $scope.type);
     });
   }
 
