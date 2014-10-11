@@ -160,6 +160,14 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   function refreshChartData(){
     if ($scope.chart){
       $scope.chart.load($scope.data);
+
+      var gridLines = [{ value: new Date().getFullYear(), text: 'Today' }],
+          events = $scope.events.Solar.concat($scope.events.Wind);
+      for (var i in events){
+        var e = events[i];
+        gridLines.push({ value: e.date, text: e.type + ' Project @ ' + e.location });
+      }
+      $scope.chart.xgrids(gridLines);
     }
   }
 
