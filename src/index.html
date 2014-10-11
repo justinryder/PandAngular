@@ -15,7 +15,13 @@
       <div chart="chart" data="data" menu>
         <div class="row">
           <div class="small-6 columns">
-            
+            <div class="panel" ng-repeat="event in events.Solar.concat(events.Wind)">
+              <div>
+                <p>{{ event.type }}</p>
+                <p>{{ event.btuDelta }}</p>
+                <p>{{ event.date }}</p>
+              </div>
+            </div>
           </div>
           <div class="small-6 columns">
             <div class="panel">
