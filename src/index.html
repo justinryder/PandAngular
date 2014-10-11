@@ -7,12 +7,55 @@
 	</head>
 	<body>
     <header>
-      <h1><i class="fa fa-area-chart"></i>PandAngular</h1>
+      <h1><i class="fa fa-area-chart"></i>Pan-dAng-ular</h1>
     </header>
   
 		<div ng-controller="controlsController" class="controls">
 			<div id="graph-main" chart="chart" data="data" graph></div>
-			<select ng-model="type" ng-options="type for type in types"></select>
+      <div chart="chart" data="data" menu>
+        <div class="row">
+          <div class="small-6 columns">
+            
+          </div>
+          <div class="small-6 columns">
+            <div class="panel">
+              <h2>Add an energy project</h5>
+              <p>Choose a new energy source for your community:</p>
+              <dl class="tabs" data-tab>
+                <dd class="active"><a href="#panel1">Wind</a></dd>
+                <dd><a href="#panel2">Solar</a></dd>
+                <dd><a href="#panel3">Nuclear</a></dd>
+              </dl>
+              <div class="tabs-content">
+                <div class="content active" id="panel1">
+                  <button class="button">Wind</button>
+                  <form>
+                    Year:
+                    <input type="range" min="1" max="5">
+                    <input type="text">
+                  </form>
+                </div>
+                <div class="content" id="panel2">
+                  <button class="button">Solar</button>
+                  <form>
+                    Year:
+                    <input type="range" min="1" max="5">
+                    <input type="text">
+                  </form>
+                </div>
+                <div class="content" id="panel3">
+                  <button class="button">Nuclear</button>
+                  <form>
+                    Year:
+                    <input type="range" min="1" max="5">
+                    <input type="text">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 		</div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -22,6 +65,6 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 
-		<a href="https://github.com/justinryder/PandAngular" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+		<a class="fork" href="https://github.com/justinryder/PandAngular" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 	</body>
 </html>

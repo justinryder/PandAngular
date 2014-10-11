@@ -60,10 +60,13 @@ module.exports = function(grunt){
                 },
                 files: {
                     'app/js/app.js': [
+                        'bower_components/foundation/js/vendor/fastclick.js',
+                        'bower_components/foundation/js/foundation.min.js',
                         'src/js/app.js',
                         'src/js/graphController.js',
                         'src/js/graphDirective.js',
-                        'src/js/controlsController.js'
+                        'src/js/controlsController.js',
+                        'src/js/menuDirective.js'
                     ]
                 }
             }
