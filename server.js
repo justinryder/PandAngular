@@ -5,9 +5,6 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-//app.use(bodyParser.urlencoded({ extend: true }));
-//app.use(bodyParser.json());
-
 var router = express.Router();
 
 var appDirectory = path.join(__dirname, 'app');
@@ -38,17 +35,7 @@ mongoClient.connect(dbPath, function(err, db){
 
   router.get('/collections/:collectionName', function(req, res, next){
     console.log('GET ' + req.params.collectionName);
-    req.collection.find({}).toArray(function(e, results){
-      if (e) return next(e);
-      res.json(results);
-    });
-  });
-
-  router.get('/collections/:collectionName/:field/:value', function(req, res, next){
-    console.log('GET ' + req.params.collectionName + '.' + req.params.field + ' == ' + req.params.value);
-    var query = {};
-    query[req.params.field] = req.params.value;
-    req.collection.find(query).toArray(function(e, results){
+    req.collection.find(getQueryOrEmptyObject(req)).toArray(function(e, results){
       if (e) return next(e);
       res.json(results);
     });
@@ -64,15 +51,15 @@ mongoClient.connect(dbPath, function(err, db){
 
   router.put('/collections/:collectionName', function(req, res, next){
     console.log('PUT ' + req.params.collectionName);
-    req.collection.update(req.body.query, req.body.update, { safe: true, multi: false }, function (e, results){
+    req.collection.update(getQueryOrEmptyObject(req), req.body, { safe: true, multi: false }, function (e, results){
       if (e) return next(e);
       res.json(results);
     });
   });
 
-  router.delete('/collections/:collectionName/:id', function(req, res, next){
-    console.log('DELETE ' + req.params.collectionName + ' ' + req.params.id);
-    req.collection.remove({ _id: req.collection.id(req.params.id) }, function(e, results){
+  router.delete('/collections/:collectionName', function(req, res, next){
+    console.log('DELETE ' + req.params.collectionName);
+    req.collection.remove(getQueryOrEmptyObject(req), function(e, results){
       if (e) return next(e);
       res.json(results);
     });
@@ -88,3 +75,7 @@ mongoClient.connect(dbPath, function(err, db){
 
   process.on('SIGINT', cleanup).on('SIGTERM', cleanup);
 });
+
+function getQueryOrEmptyObject(req){
+  return req.query.query ? JSON.parse(req.query.query) : {};
+}
