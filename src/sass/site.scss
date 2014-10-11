@@ -2,9 +2,12 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts" !default; //
 
 $colors: #294018, #735D49, #D9CEC7, #A69185, #59352D;
 
+$button-bg-color: nth($colors, 4);
+$button-bg-hover: nth($colors, 2);
 
 @import "reset";
 @import "foundation";
 @import "font-awesome";
 @import "layout";
+@import "projects";
 @import "graph";

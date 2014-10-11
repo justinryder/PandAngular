@@ -1,0 +1,13 @@
+.projects {
+  margin: 50px 15px 0 15px;
+}
+
+.projects .projects-existing,
+.projects .projects-projected {
+  width: 50%;
+  float: left;
+
+  h2 {
+    color: nth($colors, 5);
+  }
+}
