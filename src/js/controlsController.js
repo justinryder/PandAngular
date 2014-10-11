@@ -28,22 +28,36 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
       mwTotal;
   
   $scope.events = {
-    // Hydro: [{
-    //   type: 'hydro',
-    //   btuDelta: 5,
-    //   date: 2026,
-    //   location: 'Sheldon'
-    // }],
     Solar: [],
     Wind: []
   };
 
-  $scope.proposedProjectLocation = '';
-  $scope.proposedProjectYear = new Date().getFullYear();
+  $scope.proposedEvent = {
+    location: '',
+    type: '',
+    btuDelta: 0,
+    year: new Date().getFullYear()
+  };
+
   $scope.minYear = new Date().getFullYear();
   $scope.maxYear = 2050;
-  $scope.saveProject = function() {
-    console.log($scope.data);
+
+  $scope.saveProject = function(type) {
+    var btu = 0;
+
+    if(type === 'Wind') {
+      btu = 6;
+    } else if(type === 'Solar') {
+      btu = 1;
+    }
+    console.log(btu, type,
+        $scope.proposedEvent.year,
+        $scope.proposedEvent.location);
+    addEvent(type, btu,
+        $scope.proposedEvent.year,
+        $scope.proposedEvent.location,
+        true);
+
   };
 
   $http.get('json/productionData.json').success(function(data){
@@ -81,15 +95,13 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     $scope.data.columns = [];
     $scope.data.columns[0] = dates;
 
-    var _nuclear = nuclear.concat([]),
-        _solar = solar.concat([]),
+    var _solar = solar.concat([]),
         _wind = wind.concat([]);
 
-    //_.each($scope.events.Nuclear, function(e){ applyEventToDataSet(_nuclear, e); });
     _.each($scope.events.Solar, function(e){ applyEventToDataSet(_solar, e); });
     _.each($scope.events.Wind, function(e){ applyEventToDataSet(_wind, e); });
 
-    addDataSet('Nuclear', _nuclear);
+    addDataSet('Nuclear', nuclear);
     addDataSet('Solar', _solar);
     addDataSet('Wind', _wind);
     //addDataSet('Wind & Solar', windSolar);
