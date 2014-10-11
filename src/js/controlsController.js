@@ -19,6 +19,23 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     types: {}
   };
 
+  $scope.plannedProjects = [
+    {
+
+    }
+  ]
+
+  $scope.proposedProjects = [];
+
+  $scope.proposedProjectLocation = '';
+  $scope.proposedProjectYear = new Date().getFullYear();
+  $scope.minYear = new Date().getFullYear();
+  $scope.maxYear = 2050;
+  $scope.saveProject = function() {
+    console.log($scope.proposedProjectYear);
+    console.log('wft');
+  };
+
   $http.get('json/productionData.json').success(function(data){
     console.log(data);
     var dates = ['x'].concat(_.pluck(data, 'year')),
@@ -76,6 +93,12 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     $scope.data.columns.push(dataSet);
     $scope.data.types[name] = $scope.type;
     refreshChartData();
+  }
+
+  function addEnergyEvent(name, productionIncrease) {
+    // $scope.data.columns
+    // $scope.data.types[name] = $scope.type;
+    // refreshChartData();
   }
 
   $scope.changeType = function(dataName, type){
