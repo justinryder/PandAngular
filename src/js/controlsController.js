@@ -28,20 +28,22 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
       mwTotal;
   
   $scope.events = {
-    nuclear: [],
-    solar: [],
-    wind: []
+    // Hydro: [{
+    //   type: 'hydro',
+    //   btuDelta: 5,
+    //   date: 2026,
+    //   location: 'Sheldon'
+    // }],
+    Solar: [],
+    Wind: []
   };
-
-  $scope.proposedProjects = [];
 
   $scope.proposedProjectLocation = '';
   $scope.proposedProjectYear = new Date().getFullYear();
   $scope.minYear = new Date().getFullYear();
   $scope.maxYear = 2050;
   $scope.saveProject = function() {
-    console.log($scope.proposedProjectYear);
-    console.log('wft');
+    console.log($scope.data);
   };
 
   $http.get('json/productionData.json').success(function(data){
@@ -54,15 +56,21 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     btuTotal = ['Trillion BTU Total'].concat(_.pluck(data, 'trillionBtuTotal'));
     mwTotal = ['MegaWatt Total'].concat(_.pluck(data, 'MWTotal'));
 
-    applyEventsToChartData();
+    addPlannedEvents();
   });
+
+  function addPlannedEvents() {
+    addEvent('Solar', 1, 2023);
+    addEvent('Wind', 6, 2017);
+  }
 
   function addEvent(powerType, btuDelta, date){
     var e = {
+      type: powerType,
       btuDelta: btuDelta,
       date: date
     };
-    events[powerType].push(e);
+    $scope.events[powerType].push(e);
     applyEventsToChartData();
   }
 
@@ -74,9 +82,9 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
         _solar = solar.concat([]),
         _wind = wind.concat([]);
 
-    _.each($scope.events.nuclear, function(e){ applyEventToDataSet(_nuclear, e); });
-    _.each($scope.events.solar, function(e){ applyEventToDataSet(_solar, e); });
-    _.each($scope.events.wind, function(e){ applyEventToDataSet(_wind, e); });
+    //_.each($scope.events.Nuclear, function(e){ applyEventToDataSet(_nuclear, e); });
+    _.each($scope.events.Solar, function(e){ applyEventToDataSet(_solar, e); });
+    _.each($scope.events.Wind, function(e){ applyEventToDataSet(_wind, e); });
 
     addDataSet('Nuclear', _nuclear);
     addDataSet('Solar', _solar);
@@ -95,10 +103,10 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   }
 
   $scope.removeEvent = function(e){
-    for (var i in events){
-      var index = events[i].indexOf(e);
+    for (var i in $scope.events){
+      var index = $scope.events[i].indexOf(e);
       if (index > -1){
-        delete events[i][index];
+        delete $scope.events[i][index];
       }
     }
   };
@@ -145,12 +153,6 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     $scope.data.columns.push(dataSet);
     $scope.data.types[name] = $scope.type;
     refreshChartData();
-  }
-
-  function addEnergyEvent(name, productionIncrease) {
-    // $scope.data.columns
-    // $scope.data.types[name] = $scope.type;
-    // refreshChartData();
   }
 
   $scope.changeType = function(dataName, type){
