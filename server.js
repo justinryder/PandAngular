@@ -1,7 +1,13 @@
 var express = require('express');
-var app = express();
 var path = require('path');
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
+
+var app = express();
+var router = express.Router();
+
+app.use(bodyParser.urlencoded({ extend: true }));
+app.use(bodyParser.json());
 
 var appDirectory = path.join(__dirname, 'app');
 app.use(express.static(appDirectory));
@@ -24,6 +30,12 @@ db.on('error', function(){
 });
 db.on('open', function(){
   console.log('connected to ' + dbPath);
+
+  router.get('/test', function(req, res){
+    res.json({ message: 'test data' });
+  });
+
+  app.use('/api', router);
 });
 
 function cleanup(){
