@@ -1,0 +1,31 @@
+db.raw.aggregate([
+{$group: {_id: "$Source", generated: {$sum: "$kwh_g"}, consumed: {$sum: "$kwh_c"} } },
+{$project: {_id: "$_id", percent: {$divide: [ "$generated", "$consumed" ]} } }
+]);
+
+[
+    {
+        "_id" : "daily-service-montpelier",
+        "percent" : 0.0121049901841781
+    },
+    {
+        "_id" : "detailed-service-client4",
+        "percent" : 0.6130171979149154
+    },
+    {
+        "_id" : "detailed-service-client1",
+        "percent" : 0.3629549182737469
+    },
+    {
+        "_id" : "daily-service-area",
+        "percent" : 0.007051044675348977
+    },
+    {
+        "_id" : "detailed-service-client2",
+        "percent" : 0
+    },
+    {
+        "_id" : "detailed-service-client3",
+        "percent" : 0
+    }
+]

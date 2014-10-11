@@ -1,0 +1,50 @@
+var data = new Array();
+db.raw.aggregate([
+{$match: {Source: "detailed-service-client4"}}
+]).result.forEach(function(entry){
+    entry.time = entry.dt.split(' ')[1];
+    data.push(entry);
+});
+var times = new Array();
+data.forEach(function(entry){
+    var foundInd = -1;
+    times.forEach(function(time, ind){
+        if (time.time == entry.time)
+        {
+            foundInd = ind;
+            return false;
+        }
+    });
+    if (foundInd == -1)
+    {
+        times.push({
+            time: entry.time,
+            count: 1,
+            kwh_c: entry.kwh_c,
+            kwh_g: entry.kwh_g
+        });
+    }
+    else
+    {
+        times[foundInd].count++;
+        times.kwh_c += entry.kwh_c;
+        times.kwh_g += entry.kwh_g;
+    }
+});
+times.forEach(function(time){
+    time.avg_kwh_c = time.kwh_c / time.count;
+    time.avg_kwh_g = time.kwh_g / time.count;
+    delete time.kwh_c;
+    delete time.kwh_g;
+    if (time.avg_kwh_c == 0)
+        time.avg_kwh_c = 0.000001; // Hack to fix /zero
+    time.return_rate = time.avg_kwh_g / time.avg_kwh_c;
+});
+//times.sort(function(a, b){
+//  if (a.return_rate > b.return_rate)
+//     return -1;
+//  if (a.return_rate < b.return_rate)
+//    return 1;
+//  return 0; 
+//});
+printjson(times);
