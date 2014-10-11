@@ -11,7 +11,15 @@ app.directive('graph', [function($window) {
 
       scope.chart = c3.generate({
         bindto: '#' + elem.attr('id'),
-        data: data
+        data: data,
+        axis: {
+          x: {
+            label: 'date'
+          },
+          y: {
+            label: 'kwh'
+          }
+        }
       });
     }
   };
