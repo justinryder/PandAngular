@@ -20,6 +20,9 @@
     "tests"
   ],
   "devDependencies": {
-    "foundation": "~5.4.6"
+    "foundation": "~5.4.6",
+    "foundation-icons": "*",
+    "foundation-icon-fonts": "*",
+    "fontawesome": "~4.2.0"
   }
 }

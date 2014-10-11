@@ -1,6 +1,6 @@
 app.directive('graph', [function($window) {
   return{
-    restrict: 'E',
+    restrict: 'EA',
     controller: 'graphController',
     scope: {
       chart: '=',
@@ -11,6 +11,15 @@ app.directive('graph', [function($window) {
 
       scope.chart = c3.generate({
         bindto: '#' + elem.attr('id'),
+        data: data,
+        axis: {
+          x: {
+            label: 'date'
+          },
+          y: {
+            label: 'kwh'
+          }
+        },
         data: data,
         subchart: {
           show: true
