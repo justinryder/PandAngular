@@ -30,13 +30,6 @@ module.exports = function(grunt){
                 options: {
                     livereload: true
                 }
-            },
-            json: {
-                files: ['src/json/**/*.json'],
-                tasks: ['copy:json'],
-                options: {
-                    livereload: true
-                }
             }
         },
         compass: {
@@ -87,12 +80,6 @@ module.exports = function(grunt){
                 flatten: true,
                 src: 'src/images/**/*',
                 dest: 'app/images/'
-            },
-            json: {
-                expand: true,
-                flatten: true,
-                src: 'src/json/**/*.json',
-                dest: 'app/json/'
             }
         }
     });
