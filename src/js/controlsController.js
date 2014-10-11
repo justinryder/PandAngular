@@ -22,20 +22,20 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   $http.get('json/productionData.json').success(function(data){
     console.log(data);
     var dates = ['x'].concat(_.pluck(data, 'year')),
-        nuclear = ['nuclear'].concat(_.pluck(data, 'nuclear')),
-        solar = ['solar'].concat(_.pluck(data, 'solar')),
-        wind = ['wind'].concat(_.pluck(data, 'wind')),
-        windSolar = ['wind solar'].concat(_.pluck(data, 'wind solar')),
-        btuTotal = ['trillion BTU total'].concat(_.pluck(data, 'trillionBtuTotal')),
-        mwTotal = ['MW total'].concat(_.pluck(data, 'MWTotal'));
+        nuclear = ['Nuclear'].concat(_.pluck(data, 'nuclear')),
+        solar = ['Solar'].concat(_.pluck(data, 'solar')),
+        wind = ['Wind'].concat(_.pluck(data, 'wind')),
+        windSolar = ['Wind & Solar'].concat(_.pluck(data, 'wind solar')),
+        btuTotal = ['Trillion BTU Total'].concat(_.pluck(data, 'trillionBtuTotal')),
+        mwTotal = ['MegaWatt Total'].concat(_.pluck(data, 'MWTotal'));
 
     $scope.data.columns[0] = dates;
-    addDataSet('nuclear', nuclear);
-    addDataSet('solar', solar);
-    addDataSet('wind', wind);
-    addDataSet('wind solar', windSolar);
-    addDataSet('trillion BTU total', btuTotal);
-    addDataSet('MW total', mwTotal);
+    addDataSet('Nuclear', nuclear);
+    addDataSet('Solar', solar);
+    addDataSet('Wind', wind);
+    //addDataSet('Wind & Solar', windSolar);
+    addDataSet('Total', btuTotal);
+    //addDataSet('MegaWatt Total', mwTotal);
   });
 
   var customers = ['detailed-service-client1', 'detailed-service-client2', 'detailed-service-client3', 'detailed-service-client4'];

@@ -22,7 +22,12 @@ app.directive('graph', [function($window) {
             }*/
           },
           y: {
-            label: 'kwh'
+            label: 'Trillion BTU'
+          }
+        },
+        grid: {
+          x: {
+            lines: [{ value: new Date().getFullYear(), text: 'Today' }]
           }
         },
         subchart: {
