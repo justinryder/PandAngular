@@ -34,7 +34,7 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     addDataSet('Solar', solar);
     addDataSet('Wind', wind);
     //addDataSet('Wind & Solar', windSolar);
-    addDataSet('Total', btuTotal);
+    //addDataSet('Total', btuTotal);
     //addDataSet('MegaWatt Total', mwTotal);
   });
 
