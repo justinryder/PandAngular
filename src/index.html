@@ -9,17 +9,53 @@
     <header>
       <h1><i class="fa fa-area-chart"></i>Pan-dAng-ular</h1>
     </header>
-    <ul class="button-group round secondary">
-      <li><a href="#" class="small button">Button 1</a></li>
-      <li><a href="#" class="small button">Button 2</a></li>
-      <li><a href="#" class="small button">Button 3</a></li>
-      <li><a href="#" class="small button">Button 2</a></li>
-      <li><a href="#" class="small button">Button 3</a></li>
-    </ul>
   
 		<div ng-controller="controlsController" class="controls">
 			<div id="graph-main" chart="chart" data="data" graph></div>
-			<select ng-model="type" ng-options="type for type in types" class="line-type"></select>
+      <div chart="chart" data="data" menu>
+        <div class="row">
+          <div class="small-6 columns">
+            
+          </div>
+          <div class="small-6 columns">
+            <div class="panel">
+              <h2>Add an energy project</h5>
+              <p>Choose a new energy source for your community:</p>
+              <dl class="tabs" data-tab>
+                <dd class="active"><a href="#panel1">Wind</a></dd>
+                <dd><a href="#panel2">Solar</a></dd>
+                <dd><a href="#panel3">Nuclear</a></dd>
+              </dl>
+              <div class="tabs-content">
+                <div class="content active" id="panel1">
+                  <button class="button">Wind</button>
+                  <form>
+                    Year:
+                    <input type="range" min="1" max="5">
+                    <input type="text">
+                  </form>
+                </div>
+                <div class="content" id="panel2">
+                  <button class="button">Solar</button>
+                  <form>
+                    Year:
+                    <input type="range" min="1" max="5">
+                    <input type="text">
+                  </form>
+                </div>
+                <div class="content" id="panel3">
+                  <button class="button">Nuclear</button>
+                  <form>
+                    Year:
+                    <input type="range" min="1" max="5">
+                    <input type="text">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 		</div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
