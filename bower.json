@@ -1,0 +1,25 @@
+{
+  "name": "PandAngular",
+  "version": "0.0.0",
+  "homepage": "https://github.com/justinryder/PandAngular",
+  "authors": [
+    "Al Ramirez",
+    "Brian Clifford",
+    "Justin Ryder",
+    "Stephen Lane Walsh",
+    "Patrick Mulcahy"
+  ],
+  "description": "HackVT 2014 Project",
+  "main": "app/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "foundation": "~5.4.6"
+  }
+}

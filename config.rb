@@ -1,3 +1,5 @@
+add_import_path "bower_components/foundation/scss"
+
 preferred_syntax = :scss
 http_path = '/'
 css_dir = 'app/css'
