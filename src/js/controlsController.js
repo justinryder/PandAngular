@@ -1,4 +1,16 @@
 app.controller('controlsController', ['$scope', '$http', function($scope, $http) {
+  $scope.types = ['line', 'spline', 'step', 'area', 'area-line', 'area-spline', 'area-step'];
+  $scope.type = $scope.types[0];
+
+  $scope.$watch(function(scope){
+    return scope.type;
+  }, function(newValue){
+    for (var i in $scope.data.types) {
+      $scope.data.types[i] = newValue;
+    }
+    refreshChartData();
+  });
+
   $scope.data = {
     x: 'x',
     columns: [
@@ -52,6 +64,8 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   };
 
   function refreshChartData(){
-    $scope.chart.load($scope.data);
+    if ($scope.chart){
+      $scope.chart.load($scope.data);
+    }
   }
 }]);
