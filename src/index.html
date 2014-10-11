@@ -15,18 +15,8 @@
       <div chart="chart" data="data" menu>
         <div class="row">
           <div class="small-6 columns">
-            <div class="panel" ng-repeat="event in events.Solar.concat(events.Wind)">
-              <div>
-                <p>{{ event.type }}</p>
-                <p>{{ event.location }}</p>
-                <p>{{ event.btuDelta }}</p>
-                <p>{{ event.date }}</p>
-              </div>
-            </div>
-          </div>
-          <div class="small-6 columns">
             <div class="panel">
-              <h2>Add an energy project</h5>
+              <h2>Add an energy project</h2>
               <p>Choose a new energy source for your community:</p>
               <dl class="tabs" data-tab>
                 <dd class="active"><a href="#panel1">Wind</a></dd>
@@ -65,53 +55,22 @@
         <section class="projects-existing">
           <h2>Active Energy Projects</h2>
           <ul>
-            <li class="project">
-              <h3>Kingdom Community Wind</h3>
-	      <span class="type">Wind</span>
-              <p>Kingdom Community Wind is a project... </p>
+            <li class="project" ng-repeat="event in events.Solar.concat(events.Wind)">
+              <h3>{{ event.name }}</h3>
+	            <span class="type" ng-class="{{ event.type }}">{{ event.type }}</span>
+              <p>{{ event.description }}</p>
               <dl>
-                <dt>Est. Investment</dt>
-                <dd>$150m</dd>
-                <dt>Current Return</dt>
-                <dd>186,000 MWh annually</dd>
-                <dt>Number of Turbines</dt>
-                <dd>3-21</dd>
+                <dt>Location</dt>
+                <dd>{{ event.location }}</dd>
+                <dt>Power Generated</dt>
+                <dd>{{ event.btuDelta }}</dd>
+                <dt>Year</dt>
+                <dd>{{ event.date }}</dd>
               </dl>
-            </li>
-            <li class="project">
-              <h3>Sheffield Wind</h3>
-	      <span class="type">Wind</span>
-              <p>Sheffield Wind is a project... </p>
-              <dl>
-                <dt>Current Return</dt>
-                <dd>13,000 Vermont Households worth annually</dd>
-                <dt>Number of Turbines</dt>
-                <dd>16</dd>
-              </dl>
-            </li>
-            <li class="project">
-              <h3>Alteris Ferrisburgh Solar Farm</h3>
-	      <span class="type">Solar</span>
-              <p>Alteris Ferrisburgh Solar Farm is a project... </p>
-              <dl>
-                <dt>Current Return</dt>
-                <dd>1,239 MWh annually</dd>
-                <dt>Solar Resource</dt>
-                <dd>4.24 kWh/m2/day</dd>
-              </dl>
-            </li>
-            <li class="project">
-              <h3>AllEarth South Burlington Solar Farm</h3>
-	      <span class="type">Solar</span>
-              <p>TriLand Williamstown Soloar Farm is a project... </p>
-              <dl>
-                <dt>Current Return</dt>
-                <dd>3,400 MWh</dd>
-                <dt>Solar Resource</dt>
-                <dd>5.5 kWh/m2/day</dd>
-              </dl>
+              <button ng-click="removeEvent(event)">Remove</button>
             </li>
           </ul>
+
         </section>
 
         <section class="projects-projected">
@@ -119,19 +78,22 @@
           <ul>
             <li class="project">
               <h3>Deerfield Wind</h3>
-	      <span class="type">Wind</span>
+      	      <span class="type wind">Wind</span>
               <p>Deerfield Wind is a project... </p>
+
               <dl>
-                <dt>Est. Return</dt>
-                <dd>14,000 Vermont Households worth annually</dd>
-                <dt>Number of Turbines</dt>
-                <dd>7-15</dd>
+                <dt>Location</dt>
+                <dd>{{ event.location }}</dd>
+                <dt>Power Generated</dt>
+                <dd>{{ event.btuDelta }}</dd>
+                <dt>Year</dt>
+                <dd>{{ event.date }}</dd>
               </dl>
               <button>Show In Projection</button>
             </li>
             <li class="project">
               <h3>TriLand Williamstown Soloar Farm</h3>
-	      <span class="type">Solar</span>
+	            <span class="type solar">Solar</span>
               <p>TriLand Williamstown Soloar Farm is a project... </p>
               <dl>
                 <dt>Est. Investment</dt>
