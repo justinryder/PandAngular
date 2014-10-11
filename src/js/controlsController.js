@@ -25,12 +25,13 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
       wind,
       windSolar,
       btuTotal,
-      mwTotal,
-      events = {
-        nuclear: [],
-        solar: [],
-        wind: []
-      };
+      mwTotal;
+  
+  $scope.events = {
+    nuclear: [],
+    solar: [],
+    wind: []
+  };
 
   $http.get('json/productionData.json').success(function(data){
     console.log(data);
@@ -42,7 +43,8 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     btuTotal = ['Trillion BTU Total'].concat(_.pluck(data, 'trillionBtuTotal'));
     mwTotal = ['MegaWatt Total'].concat(_.pluck(data, 'MWTotal'));
 
-    applyEventsToChartData();  });
+    applyEventsToChartData();
+  });
 
   function addEvent(powerType, btuDelta, date){
     var e = {
@@ -61,9 +63,9 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
         _solar = solar.concat([]),
         _wind = wind.concat([]);
 
-    _.each(events.nuclear, function(e){ applyEventToDataSet(_nuclear, e); });
-    _.each(events.solar, function(e){ applyEventToDataSet(_solar, e); });
-    _.each(events.wind, function(e){ applyEventToDataSet(_wind, e); });
+    _.each($scope.events.nuclear, function(e){ applyEventToDataSet(_nuclear, e); });
+    _.each($scope.events.solar, function(e){ applyEventToDataSet(_solar, e); });
+    _.each($scope.events.wind, function(e){ applyEventToDataSet(_wind, e); });
 
     addDataSet('Nuclear', _nuclear);
     addDataSet('Solar', _solar);
@@ -80,6 +82,19 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
       }
     }
   }
+
+  $scope.removeEvent = function(e){
+    for (var i in events){
+      var index = events[i].indexOf(e);
+      if (index > -1){
+        delete events[i][index];
+      }
+    }
+  };
+
+  $scope.addDummyEvent = function(){
+    addEvent('solar', 10, 2030);
+  };
 
   var customers = ['detailed-service-client1', 'detailed-service-client2', 'detailed-service-client3', 'detailed-service-client4'];
   // init w/ the detailed 4 customer data
