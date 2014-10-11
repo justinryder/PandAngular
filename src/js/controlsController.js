@@ -19,24 +19,67 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     types: {}
   };
 
+  var dates,
+      nuclear,
+      solar,
+      wind,
+      windSolar,
+      btuTotal,
+      mwTotal,
+      events = {
+        nuclear: [],
+        solar: [],
+        wind: []
+      };
+
   $http.get('json/productionData.json').success(function(data){
     console.log(data);
-    var dates = ['x'].concat(_.pluck(data, 'year')),
-        nuclear = ['Nuclear'].concat(_.pluck(data, 'nuclear')),
-        solar = ['Solar'].concat(_.pluck(data, 'solar')),
-        wind = ['Wind'].concat(_.pluck(data, 'wind')),
-        windSolar = ['Wind & Solar'].concat(_.pluck(data, 'wind solar')),
-        btuTotal = ['Trillion BTU Total'].concat(_.pluck(data, 'trillionBtuTotal')),
-        mwTotal = ['MegaWatt Total'].concat(_.pluck(data, 'MWTotal'));
+    dates = ['x'].concat(_.pluck(data, 'year'));
+    nuclear = ['Nuclear'].concat(_.pluck(data, 'nuclear'));
+    solar = ['Solar'].concat(_.pluck(data, 'solar'));
+    wind = ['Wind'].concat(_.pluck(data, 'wind'));
+    windSolar = ['Wind & Solar'].concat(_.pluck(data, 'wind solar'));
+    btuTotal = ['Trillion BTU Total'].concat(_.pluck(data, 'trillionBtuTotal'));
+    mwTotal = ['MegaWatt Total'].concat(_.pluck(data, 'MWTotal'));
 
+    applyEventsToChartData();  });
+
+  function addEvent(powerType, btuDelta, date){
+    var e = {
+      btuDelta: btuDelta,
+      date: date
+    };
+    events[powerType].push(e);
+    applyEventsToChartData();
+  }
+
+  function applyEventsToChartData(){
+    $scope.data.columns = [];
     $scope.data.columns[0] = dates;
-    addDataSet('Nuclear', nuclear);
-    addDataSet('Solar', solar);
-    addDataSet('Wind', wind);
+
+    var _nuclear = nuclear.concat([]),
+        _solar = solar.concat([]),
+        _wind = wind.concat([]);
+
+    _.each(events.nuclear, function(e){ applyEventToDataSet(_nuclear, e); });
+    _.each(events.solar, function(e){ applyEventToDataSet(_solar, e); });
+    _.each(events.wind, function(e){ applyEventToDataSet(_wind, e); });
+
+    addDataSet('Nuclear', _nuclear);
+    addDataSet('Solar', _solar);
+    addDataSet('Wind', _wind);
     //addDataSet('Wind & Solar', windSolar);
     //addDataSet('Total', btuTotal);
     //addDataSet('MegaWatt Total', mwTotal);
-  });
+  }
+
+  function applyEventToDataSet(dataSet, e){
+    for (var i = 0; i < dataSet.length; i++){
+      if (dates[i] >= e.date){
+        dataSet[i] = dataSet[i] + e.btuDelta;
+      }
+    }
+  }
 
   var customers = ['detailed-service-client1', 'detailed-service-client2', 'detailed-service-client3', 'detailed-service-client4'];
   // init w/ the detailed 4 customer data

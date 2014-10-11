@@ -12,7 +12,7 @@ app.directive('graph', [function($window) {
         data: scope.data,
         axis: {
           x: {
-            label: 'year'
+            label: 'Year'
             /*label: 'hour',
             type: 'timeseries',
             tick: {
