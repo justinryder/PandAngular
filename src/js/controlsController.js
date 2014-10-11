@@ -60,11 +60,11 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   });
 
   function addPlannedEvents() {
-    addEvent('Solar', 1, 2023, 'Richmond');
+    addEvent('Solar', 1, 2023, 'Richmond', false);
     addEvent('Wind', 6, 2017, 'Middlebury');
   }
 
-  function addEvent(powerType, btuDelta, date, location){
+  function addEvent(powerType, btuDelta, date, location, shouldRefresh){
     var e = {
       type: powerType,
       btuDelta: btuDelta,
@@ -72,7 +72,9 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
       location: location
     };
     $scope.events[powerType].push(e);
-    applyEventsToChartData();
+    if (typeof shouldRefresh === 'undefined' || shouldRefresh){
+      applyEventsToChartData();
+    }
   }
 
   function applyEventsToChartData(){
