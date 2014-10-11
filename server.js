@@ -31,8 +31,24 @@ db.on('error', function(){
 db.on('open', function(){
   console.log('connected to ' + dbPath);
 
-  router.get('/test', function(req, res){
-    res.json({ message: 'test data' });
+  router.param('collectionName', function(req, res, next, collectionName){
+    req.collection = db.collection(collectionName);
+    return next();
+  });
+
+  router.get('/collections/:collectionName', function(req, res, next){
+    console.log('GET ' + req.collectionName);
+    req.collection.find({}).toArray(function(e, results){
+      if (e) return next(e);
+      res.json(results);
+    });
+  });
+
+  router.post('/collections/:collectionName', function(req, res, next){
+    req.collection.insert(req.body, {}, function(e, results){
+      if (e) return next(e);
+      res.json(results);
+    });
   });
 
   app.use('/api', router);
