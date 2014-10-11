@@ -14,7 +14,13 @@ app.directive('graph', [function($window) {
         data: data,
         axis: {
           x: {
-            label: 'date'
+            label: 'hour',
+            type: 'timeseries',
+            tick: {
+              format: function(x) {
+                return x.getHours();
+              }
+            }
           },
           y: {
             label: 'kwh'
