@@ -12,44 +12,6 @@
 
 		<div ng-controller="controlsController" class="controls">
 			<div id="graph-main" chart="chart" data="data" graph></div>
-      <!-- <div >
-        <div class="row">
-          <div class="small-6 columns">
-            <div class="panel">
-              <h2>Add an energy project</h2>
-              <p>Choose a new energy source for your community:</p>
-              <dl class="tabs" data-tab>
-                <dd class="active"><a href="#panel1">Wind</a></dd>
-                <dd><a href="#panel2">Solar</a></dd>
-              </dl>
-              <div class="tabs-content">
-                <div class="content active" id="panel1">
-                  <form>
-                    <label>Year:</label>
-                    <input type="number" min="{{minYear}}" max="{{maxYear}}"
-                      ng-model="proposedEvent.year">
-                    <label>Location</label>
-                    <input ng-model="proposedEvent.location" type="text">
-                    <button class="button"
-                    ng-click="saveProject('Wind')">Approve</button>
-                  </form>
-                </div>
-                <div class="content" id="panel2">
-                  <form>
-                    <label>Year:</label>
-                    <input type="number" min="{{minYear}}" max="{{maxYear}}"
-                      ng-model="proposedEvent.year">
-                    <label>Location</label>
-                    <input ng-model="proposedEvent.location" type="text">
-                    <button class="button"
-                    ng-click="saveProject('Solar')">Solar</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
 
       <div class="projects" chart="chart" data="data" menu>
         <section class="projects-existing">
@@ -80,26 +42,33 @@
               <h3>Deerfield Wind</h3>
       	      <span class="type wind">Wind</span>
 
-              <dl>
+              <dl ng-init="deer_date = 2027">
                 <dt>Location</dt>
                 <dd>Deerfield</dd>
                 <dt>Power Generated</dt>
                 <dd>30 mwh</dd>
                 <dt>Year</dt>
-                <dd>2015</dd>
+                <dd><input type="number" ng-model="deer_date"></dd>
               </dl>
-              <button ng-click="addProject('Wind', 1/30, 2015, 'Deerfield Wind')">Show In Projection</button>
+              <button ng-click="addProject('Wind', 10, deer_date, 'Deerfield', 'Deerfield Wind')">Show In Projection</button>
             </li>
             <li class="project">
-              <h3>TriLand Williamstown Soloar Farm</h3>
+              <h3>TriLand Williamstown Solar Farm</h3>
 	            <span class="type solar">Solar</span>
-              <dl>
+              <p>TriLand Williamstown Solar Farm is a project... </p>
+              <dl ng-init="wil_date = 2017">
+                <dt>Location</dt>
+                <dd>Williamstown</dd>
+                <dt>Power Generated</dt>
+                <dd>10 mwh</dd>
+                <dt>Year</dt>
+                <dd><input type="number" ng-model="wil_date"></dd>
                 <dt>Est. Investment</dt>
                 <dd>$10m</dd>
                 <dt>Number of Panels</dt>
                 <dd>&gt; 9,000</dd>
               </dl>
-              <button>Show In Projection</button>
+              <button ng-click="addProject('Solar', 5, wil_date, 'Williamstown', 'TriLand Williamstown Solar Farm')">Show In Projection</button>
             </li>
           </ul>
         </section>
