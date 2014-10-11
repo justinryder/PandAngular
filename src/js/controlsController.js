@@ -50,18 +50,11 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     } else if(type === 'Solar') {
       btu = 1;
     }
-    addEvent(type, btu,
-        $scope.proposedEvent.year,
-        $scope.proposedEvent.location,
-        true);
+    addEvent(type, btu, $scope.proposedEvent.year, $scope.proposedEvent.location, true);
   };
 
   $scope.addProject = function(powerType, btuDelta, date, location, name) {
-    addEvent(powerType, btuDelta,
-        date,
-        location,
-        name,
-        true);
+    addEvent(powerType, btuDelta, date, location, name, true);
   };
 
   $http.get('json/productionData.json').success(function(data){
