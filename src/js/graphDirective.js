@@ -26,6 +26,11 @@ app.directive('graph', [function($window) {
         },
         zoom: {
           enabled: true
+        },
+        grid: {
+          x: {
+            show: true
+          }
         }
       });
     }

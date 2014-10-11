@@ -10,3 +10,17 @@ header {
     margin-right: 1rem;
   }
 }
+
+.button-group {
+  text-align: center;
+
+  &.round li {
+    float: none;
+    display: inline-block;
+
+    .small {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+}
