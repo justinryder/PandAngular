@@ -36,7 +36,7 @@
         </section>
 
         <section class="projects-projected">
-          <h2>Potential Enery Projects</h2>
+          <h2>Potential Energy Projects</h2>
           <ul>
             <li class="project">
               <h3>Deerfield Wind</h3>
@@ -47,7 +47,7 @@
                 <dt>Power Generated</dt>
                 <dd>30 mwh</dd>
                 <dt>Year</dt>
-                <dd><input type="number" ng-model="deer_date"></dd>
+                <dd>{{deer_date}}</dd>
               </dl>
               <button ng-click="addProject('Wind', 10, deer_date, 'Deerfield', 'Deerfield Wind')">Show In Projection</button>
             </li>
@@ -60,7 +60,7 @@
                 <dt>Power Generated</dt>
                 <dd>10 mwh</dd>
                 <dt>Year</dt>
-                <dd><input type="number" ng-model="wil_date"></dd>
+                <dd>{{wil_date}}</dd>
                 <dt>Est. Investment</dt>
                 <dd>$10m</dd>
                 <dt>Number of Panels</dt>
