@@ -1,5 +1,5 @@
 .projects {
-  margin: 50px 15px 0 15px;
+  margin: 50px 5px 0 5px;
 }
 
 .projects .projects-existing,
@@ -8,6 +8,37 @@
   float: left;
 
   h2 {
+    color: nth($colors, 1);
+  }
+
+  ul {
+    margin-left: 0;
+  }
+}
+
+.project {
+  position: relative;
+  background-color: transparentize(nth($colors, 3), 0.75);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px #ccc;
+  padding: 10px;
+  width: 90%;
+
+  h3 {
     color: nth($colors, 5);
+  }
+
+  dt {
+    margin-bottom: none;
+  }
+
+  dd {
+    margin-left: 10px;
+  }
+
+  button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
   }
 }
