@@ -3,7 +3,8 @@ app.directive('graph', [function($window) {
     restrict: 'EA',
     controller: 'graphController',
     scope: {
-      chart: '='
+      chart: '=',
+      data: '='
     },
     link: function(scope, elem, attrs){
       var data = scope.data;
