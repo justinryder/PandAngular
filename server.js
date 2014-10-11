@@ -35,7 +35,11 @@ mongoClient.connect(dbPath, function(err, db){
 
   router.get('/collections/:collectionName', function(req, res, next){
     console.log('GET ' + req.params.collectionName);
-    req.collection.find(getQueryOrEmptyObject(req)).toArray(function(e, results){
+    var cursor =  req.collection.find(getQueryOrEmptyObject(req));
+    if (req.query.take){
+      cursor = cursor.limit(+req.query.take);
+    }
+    cursor.toArray(function(e, results){
       if (e) return next(e);
       res.json(results);
     });
