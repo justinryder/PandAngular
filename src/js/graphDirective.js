@@ -35,14 +35,6 @@ app.directive('graph', [function($window) {
         },
         zoom: {
           enabled: true
-        },
-        grid: {
-          x: {
-            lines: [
-              { value: new Date(Date.parse('3/1/2013 10:45')), text: 'Consumption Event 1' },
-              { value: new Date(Date.parse('3/1/2013 17:45')), text: 'Consumption Event 2' }
-            ]
-          }
         }
       });
     }
