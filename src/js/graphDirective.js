@@ -12,16 +12,22 @@ app.directive('graph', [function($window) {
         data: scope.data,
         axis: {
           x: {
-            label: 'hour',
+            label: 'year'
+            /*label: 'hour',
             type: 'timeseries',
             tick: {
               format: function(x) {
                 return x.getHours();
               }
-            }
+            }*/
           },
           y: {
-            label: 'kwh'
+            label: 'Trillion BTU'
+          }
+        },
+        grid: {
+          x: {
+            lines: [{ value: new Date().getFullYear(), text: 'Today' }]
           }
         },
         subchart: {
