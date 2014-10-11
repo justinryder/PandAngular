@@ -72,7 +72,7 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
 
   function addPlannedEvents() {
     addEvent('Solar', 1, 2023, 'Richmond', 'Super Solar', 'some description', false);
-    addEvent('Wind', 6, 2017, 'Middlebury', 'Epic Winds');
+    addEvent('Wind', 6, 2020, 'Middlebury', 'Epic Winds');
   }
 
   function addEvent(powerType, btuDelta, date, location, name, description, shouldRefresh){
