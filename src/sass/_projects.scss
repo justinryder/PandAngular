@@ -24,21 +24,30 @@
   padding: 10px;
   width: 90%;
 
-  h3 {
-    color: nth($colors, 5);
+  dl {
+    @include legacy-pie-clearfix;
+    width: 80%;
   }
 
   dt {
-    margin-bottom: none;
+    width: 30%;
+  }
+
+  dt, dd {
+    float: left;
   }
 
   dd {
-    margin-left: 10px;
+    background-color: transparentize(#fff, 0.65);
+    padding-left: 5px;
+    width: 25%;
+    margin-right: 45%;
+    border-radius: 2px;
   }
 
   button {
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    right: 30px;
   }
 }
