@@ -1,0 +1,1000 @@
+[
+    {
+        "year" : 1960,
+        "nuclear" : 0,
+        "wind solar" : 17.339,
+        "wind" : 13.795,
+        "solar" : 3.544,
+        "trillionBtuTotal" : 17.339,
+        "MWTotal" : 5.202
+    }
+
+    ,
+    {
+        "year" : 1961,
+        "nuclear" : 0,
+        "wind solar" : 15.369,
+        "wind" : 12.228,
+        "solar" : 3.141,
+        "trillionBtuTotal" : 15.369,
+        "MWTotal" : 4.611
+    }
+
+    ,
+    {
+        "year" : 1962,
+        "nuclear" : 0,
+        "wind solar" : 15.682,
+        "wind" : 12.477,
+        "solar" : 3.205,
+        "trillionBtuTotal" : 15.682,
+        "MWTotal" : 4.705
+    }
+
+    ,
+    {
+        "year" : 1963,
+        "nuclear" : 0,
+        "wind solar" : 13.995,
+        "wind" : 11.135,
+        "solar" : 2.86,
+        "trillionBtuTotal" : 13.995,
+        "MWTotal" : 4.199
+    }
+
+    ,
+    {
+        "year" : 1964,
+        "nuclear" : 0,
+        "wind solar" : 13.5,
+        "wind" : 10.741,
+        "solar" : 2.759,
+        "trillionBtuTotal" : 13.5,
+        "MWTotal" : 4.05
+    }
+
+    ,
+    {
+        "year" : 1965,
+        "nuclear" : 0,
+        "wind solar" : 14.396,
+        "wind" : 11.454,
+        "solar" : 2.942,
+        "trillionBtuTotal" : 14.396,
+        "MWTotal" : 4.319
+    }
+
+    ,
+    {
+        "year" : 1966,
+        "nuclear" : 0,
+        "wind solar" : 15.557,
+        "wind" : 12.377,
+        "solar" : 3.18,
+        "trillionBtuTotal" : 15.557,
+        "MWTotal" : 4.667
+    }
+
+    ,
+    {
+        "year" : 1967,
+        "nuclear" : 0,
+        "wind solar" : 15.167,
+        "wind" : 12.067,
+        "solar" : 3.1,
+        "trillionBtuTotal" : 15.167,
+        "MWTotal" : 4.55
+    }
+
+    ,
+    {
+        "year" : 1968,
+        "nuclear" : 0,
+        "wind solar" : 15.086,
+        "wind" : 12.003,
+        "solar" : 3.083,
+        "trillionBtuTotal" : 15.086,
+        "MWTotal" : 4.526
+    }
+
+    ,
+    {
+        "year" : 1969,
+        "nuclear" : 0,
+        "wind solar" : 16.109,
+        "wind" : 12.817,
+        "solar" : 3.292,
+        "trillionBtuTotal" : 16.109,
+        "MWTotal" : 4.833
+    }
+
+    ,
+    {
+        "year" : 1970,
+        "nuclear" : 0,
+        "wind solar" : 14.717,
+        "wind" : 11.709,
+        "solar" : 3.008,
+        "trillionBtuTotal" : 14.717,
+        "MWTotal" : 4.415
+    }
+
+    ,
+    {
+        "year" : 1971,
+        "nuclear" : 0,
+        "wind solar" : 14.594,
+        "wind" : 11.611,
+        "solar" : 2.983,
+        "trillionBtuTotal" : 14.594,
+        "MWTotal" : 4.378
+    }
+
+    ,
+    {
+        "year" : 1972,
+        "nuclear" : 1.828,
+        "wind solar" : 15.955,
+        "wind" : 12.694,
+        "solar" : 3.261,
+        "trillionBtuTotal" : 17.783,
+        "MWTotal" : 5.335
+    }
+
+    ,
+    {
+        "year" : 1973,
+        "nuclear" : 17.422,
+        "wind solar" : 17.149,
+        "wind" : 13.644,
+        "solar" : 3.505,
+        "trillionBtuTotal" : 34.571,
+        "MWTotal" : 10.371
+    }
+
+    ,
+    {
+        "year" : 1974,
+        "nuclear" : 27.708,
+        "wind solar" : 16.134,
+        "wind" : 12.837,
+        "solar" : 3.297,
+        "trillionBtuTotal" : 43.842,
+        "MWTotal" : 13.153
+    }
+
+    ,
+    {
+        "year" : 1975,
+        "nuclear" : 39.22,
+        "wind solar" : 16.361,
+        "wind" : 13.017,
+        "solar" : 3.344,
+        "trillionBtuTotal" : 55.581,
+        "MWTotal" : 16.674
+    }
+
+    ,
+    {
+        "year" : 1976,
+        "nuclear" : 36.013,
+        "wind solar" : 19.325,
+        "wind" : 15.375,
+        "solar" : 3.95,
+        "trillionBtuTotal" : 55.338,
+        "MWTotal" : 16.601
+    }
+
+    ,
+    {
+        "year" : 1977,
+        "nuclear" : 38.097,
+        "wind solar" : 19.373,
+        "wind" : 15.414,
+        "solar" : 3.959,
+        "trillionBtuTotal" : 57.47,
+        "MWTotal" : 17.241
+    }
+
+    ,
+    {
+        "year" : 1978,
+        "nuclear" : 35.456,
+        "wind solar" : 20.504,
+        "wind" : 16.313,
+        "solar" : 4.191,
+        "trillionBtuTotal" : 55.96,
+        "MWTotal" : 16.788
+    }
+
+    ,
+    {
+        "year" : 1979,
+        "nuclear" : 37.521,
+        "wind solar" : 22.34,
+        "wind" : 17.774,
+        "solar" : 4.566,
+        "trillionBtuTotal" : 59.861,
+        "MWTotal" : 17.958
+    }
+
+    ,
+    {
+        "year" : 1980,
+        "nuclear" : 32.497,
+        "wind solar" : 22.881,
+        "wind" : 18.205,
+        "solar" : 4.676,
+        "trillionBtuTotal" : 55.378,
+        "MWTotal" : 16.613
+    }
+
+    ,
+    {
+        "year" : 1981,
+        "nuclear" : 39.362,
+        "wind solar" : 24.825,
+        "wind" : 19.751,
+        "solar" : 5.074,
+        "trillionBtuTotal" : 64.187,
+        "MWTotal" : 19.256
+    }
+
+    ,
+    {
+        "year" : 1982,
+        "nuclear" : 46.222,
+        "wind solar" : 22.667,
+        "wind" : 18.034,
+        "solar" : 4.633,
+        "trillionBtuTotal" : 68.889,
+        "MWTotal" : 20.667
+    }
+
+    ,
+    {
+        "year" : 1983,
+        "nuclear" : 31.298,
+        "wind solar" : 26.554,
+        "wind" : 21.127,
+        "solar" : 5.427,
+        "trillionBtuTotal" : 57.852,
+        "MWTotal" : 17.356
+    }
+
+    ,
+    {
+        "year" : 1984,
+        "nuclear" : 36.17,
+        "wind solar" : 26.036,
+        "wind" : 20.715,
+        "solar" : 5.321,
+        "trillionBtuTotal" : 62.206,
+        "MWTotal" : 18.662
+    }
+
+    ,
+    {
+        "year" : 1985,
+        "nuclear" : 31.86,
+        "wind solar" : 26.89,
+        "wind" : 21.394,
+        "solar" : 5.496,
+        "trillionBtuTotal" : 58.75,
+        "MWTotal" : 17.625
+    }
+
+    ,
+    {
+        "year" : 1986,
+        "nuclear" : 21.776,
+        "wind solar" : 23.871,
+        "wind" : 18.992,
+        "solar" : 4.879,
+        "trillionBtuTotal" : 45.647,
+        "MWTotal" : 13.694
+    }
+
+    ,
+    {
+        "year" : 1987,
+        "nuclear" : 36.927,
+        "wind solar" : 23.132,
+        "wind" : 18.404,
+        "solar" : 4.728,
+        "trillionBtuTotal" : 60.059,
+        "MWTotal" : 18.018
+    }
+
+    ,
+    {
+        "year" : 1988,
+        "nuclear" : 43.615,
+        "wind solar" : 21.704,
+        "wind" : 17.268,
+        "solar" : 4.436,
+        "trillionBtuTotal" : 65.319,
+        "MWTotal" : 19.596
+    }
+
+    ,
+    {
+        "year" : 1989,
+        "nuclear" : 38.171,
+        "wind solar" : 20.018,
+        "wind" : 15.927,
+        "solar" : 4.091,
+        "trillionBtuTotal" : 58.189,
+        "MWTotal" : 17.457
+    }
+
+    ,
+    {
+        "year" : 1990,
+        "nuclear" : 38.267,
+        "wind solar" : 19.483,
+        "wind" : 15.501,
+        "solar" : 3.982,
+        "trillionBtuTotal" : 57.75,
+        "MWTotal" : 17.325
+    }
+
+    ,
+    {
+        "year" : 1991,
+        "nuclear" : 43.072,
+        "wind solar" : 17.309,
+        "wind" : 13.771,
+        "solar" : 3.538,
+        "trillionBtuTotal" : 60.381,
+        "MWTotal" : 18.114
+    }
+
+    ,
+    {
+        "year" : 1992,
+        "nuclear" : 39.105,
+        "wind solar" : 16.014,
+        "wind" : 12.741,
+        "solar" : 3.273,
+        "trillionBtuTotal" : 55.119,
+        "MWTotal" : 16.536
+    }
+
+    ,
+    {
+        "year" : 1993,
+        "nuclear" : 35.421,
+        "wind solar" : 18.237,
+        "wind" : 14.51,
+        "solar" : 3.727,
+        "trillionBtuTotal" : 53.658,
+        "MWTotal" : 16.097
+    }
+
+    ,
+    {
+        "year" : 1994,
+        "nuclear" : 45.106,
+        "wind solar" : 19.068,
+        "wind" : 15.171,
+        "solar" : 3.897,
+        "trillionBtuTotal" : 64.17400000000001,
+        "MWTotal" : 19.252
+    }
+
+    ,
+    {
+        "year" : 1995,
+        "nuclear" : 40.541,
+        "wind solar" : 19.166,
+        "wind" : 15.249,
+        "solar" : 3.917,
+        "trillionBtuTotal" : 59.707,
+        "MWTotal" : 17.912
+    }
+
+    ,
+    {
+        "year" : 1996,
+        "nuclear" : 39.899,
+        "wind solar" : 21.866,
+        "wind" : 17.397,
+        "solar" : 4.469,
+        "trillionBtuTotal" : 61.765,
+        "MWTotal" : 18.53
+    }
+
+    ,
+    {
+        "year" : 1997,
+        "nuclear" : 44.776,
+        "wind solar" : 19.949,
+        "wind" : 15.872,
+        "solar" : 4.077,
+        "trillionBtuTotal" : 64.72499999999999,
+        "MWTotal" : 19.418
+    }
+
+    ,
+    {
+        "year" : 1998,
+        "nuclear" : 35.226,
+        "wind solar" : 20.289,
+        "wind" : 16.142,
+        "solar" : 4.147,
+        "trillionBtuTotal" : 55.515,
+        "MWTotal" : 16.655
+    }
+
+    ,
+    {
+        "year" : 1999,
+        "nuclear" : 42.418,
+        "wind solar" : 20.8,
+        "wind" : 16.549,
+        "solar" : 4.251,
+        "trillionBtuTotal" : 63.218,
+        "MWTotal" : 18.965
+    }
+
+    ,
+    {
+        "year" : 2000,
+        "nuclear" : 47.432,
+        "wind solar" : 21.389,
+        "wind" : 17.018,
+        "solar" : 4.371,
+        "trillionBtuTotal" : 68.821,
+        "MWTotal" : 20.646
+    }
+
+    ,
+    {
+        "year" : 2001,
+        "nuclear" : 43.559,
+        "wind solar" : 17.341,
+        "wind" : 13.797,
+        "solar" : 3.544,
+        "trillionBtuTotal" : 60.9,
+        "MWTotal" : 18.27
+    }
+
+    ,
+    {
+        "year" : 2002,
+        "nuclear" : 41.378,
+        "wind solar" : 22.714,
+        "wind" : 18.072,
+        "solar" : 4.642,
+        "trillionBtuTotal" : 64.092,
+        "MWTotal" : 19.228
+    }
+
+    ,
+    {
+        "year" : 2003,
+        "nuclear" : 46.317,
+        "wind solar" : 24.054,
+        "wind" : 19.138,
+        "solar" : 4.916,
+        "trillionBtuTotal" : 70.371,
+        "MWTotal" : 21.111
+    }
+
+    ,
+    {
+        "year" : 2004,
+        "nuclear" : 40.231,
+        "wind solar" : 22.041,
+        "wind" : 17.536,
+        "solar" : 4.505,
+        "trillionBtuTotal" : 62.272,
+        "MWTotal" : 18.682
+    }
+
+    ,
+    {
+        "year" : 2005,
+        "nuclear" : 42.491,
+        "wind solar" : 24.328,
+        "wind" : 19.356,
+        "solar" : 4.972,
+        "trillionBtuTotal" : 66.819,
+        "MWTotal" : 20.046
+    }
+
+    ,
+    {
+        "year" : 2006,
+        "nuclear" : 53.287,
+        "wind solar" : 27.602,
+        "wind" : 21.961,
+        "solar" : 5.641,
+        "trillionBtuTotal" : 80.889,
+        "MWTotal" : 24.267
+    }
+
+    ,
+    {
+        "year" : 2007,
+        "nuclear" : 49.337,
+        "wind solar" : 18.663,
+        "wind" : 14.849,
+        "solar" : 3.814,
+        "trillionBtuTotal" : 68,
+        "MWTotal" : 20.4
+    }
+
+    ,
+    {
+        "year" : 2008,
+        "nuclear" : 51.163,
+        "wind solar" : 27.049,
+        "wind" : 21.521,
+        "solar" : 5.528,
+        "trillionBtuTotal" : 78.212,
+        "MWTotal" : 23.464
+    }
+
+    ,
+    {
+        "year" : 2009,
+        "nuclear" : 56.067,
+        "wind solar" : 31.604,
+        "wind" : 25.145,
+        "solar" : 6.459,
+        "trillionBtuTotal" : 87.67100000000001,
+        "MWTotal" : 26.301
+    }
+
+    ,
+    {
+        "year" : 2010,
+        "nuclear" : 49.986,
+        "wind solar" : 30.159,
+        "wind" : 23.995,
+        "solar" : 6.164,
+        "trillionBtuTotal" : 80.145,
+        "MWTotal" : 24.044
+    }
+
+    ,
+    {
+        "year" : 2011,
+        "nuclear" : 51.351,
+        "wind solar" : 30.57,
+        "wind" : 24.322,
+        "solar" : 6.248,
+        "trillionBtuTotal" : 81.92100000000001,
+        "MWTotal" : 24.576
+    }
+
+    ,
+    {
+        "year" : 2012,
+        "nuclear" : 52.283,
+        "wind solar" : 26.956,
+        "wind" : 21.447,
+        "solar" : 5.509,
+        "trillionBtuTotal" : 79.239,
+        "MWTotal" : 23.772
+    }
+
+    ,
+    {
+        "year" : 2013,
+        "nuclear" : 51.114,
+        "wind solar" : 28.38,
+        "wind" : 22.58,
+        "solar" : 5.8,
+        "trillionBtuTotal" : 79.494,
+        "MWTotal" : 23.848
+    }
+
+    ,
+    {
+        "year" : 2014,
+        "nuclear" : 51.63,
+        "wind solar" : 29.1,
+        "wind" : 23.153,
+        "solar" : 5.947,
+        "trillionBtuTotal" : 80.73,
+        "MWTotal" : 24.219
+    }
+
+    ,
+    {
+        "year" : 2015,
+        "nuclear" : 0,
+        "wind solar" : 27.1,
+        "wind" : 21.561,
+        "solar" : 5.539,
+        "trillionBtuTotal" : 27.1,
+        "MWTotal" : 8.130000000000001
+    }
+
+    ,
+    {
+        "year" : 2016,
+        "nuclear" : 0,
+        "wind solar" : 29.98,
+        "wind" : 23.853,
+        "solar" : 6.127,
+        "trillionBtuTotal" : 29.98,
+        "MWTotal" : 8.994
+    }
+
+    ,
+    {
+        "year" : 2017,
+        "nuclear" : 0,
+        "wind solar" : 27.711,
+        "wind" : 22.047,
+        "solar" : 5.664,
+        "trillionBtuTotal" : 27.711,
+        "MWTotal" : 8.313000000000001
+    }
+
+    ,
+    {
+        "year" : 2018,
+        "nuclear" : 0,
+        "wind solar" : 27.941,
+        "wind" : 22.231,
+        "solar" : 5.711,
+        "trillionBtuTotal" : 27.941,
+        "MWTotal" : 8.382
+    }
+
+    ,
+    {
+        "year" : 2019,
+        "nuclear" : 0,
+        "wind solar" : 28.172,
+        "wind" : 22.414,
+        "solar" : 5.758,
+        "trillionBtuTotal" : 28.172,
+        "MWTotal" : 8.452
+    }
+
+    ,
+    {
+        "year" : 2020,
+        "nuclear" : 0,
+        "wind solar" : 28.402,
+        "wind" : 22.598,
+        "solar" : 5.805,
+        "trillionBtuTotal" : 28.402,
+        "MWTotal" : 8.521000000000001
+    }
+
+    ,
+    {
+        "year" : 2021,
+        "nuclear" : 0,
+        "wind solar" : 28.633,
+        "wind" : 22.781,
+        "solar" : 5.852,
+        "trillionBtuTotal" : 28.633,
+        "MWTotal" : 8.59
+    }
+
+    ,
+    {
+        "year" : 2022,
+        "nuclear" : 0,
+        "wind solar" : 28.864,
+        "wind" : 22.964,
+        "solar" : 5.899,
+        "trillionBtuTotal" : 28.864,
+        "MWTotal" : 8.659000000000001
+    }
+
+    ,
+    {
+        "year" : 2023,
+        "nuclear" : 0,
+        "wind solar" : 29.094,
+        "wind" : 23.148,
+        "solar" : 5.946,
+        "trillionBtuTotal" : 29.094,
+        "MWTotal" : 8.728
+    }
+
+    ,
+    {
+        "year" : 2024,
+        "nuclear" : 0,
+        "wind solar" : 29.325,
+        "wind" : 23.331,
+        "solar" : 5.993,
+        "trillionBtuTotal" : 29.325,
+        "MWTotal" : 8.797000000000001
+    }
+
+    ,
+    {
+        "year" : 2025,
+        "nuclear" : 0,
+        "wind solar" : 29.555,
+        "wind" : 23.515,
+        "solar" : 6.04,
+        "trillionBtuTotal" : 29.555,
+        "MWTotal" : 8.867000000000001
+    }
+
+    ,
+    {
+        "year" : 2026,
+        "nuclear" : 0,
+        "wind solar" : 29.786,
+        "wind" : 23.698,
+        "solar" : 6.088,
+        "trillionBtuTotal" : 29.786,
+        "MWTotal" : 8.936
+    }
+
+    ,
+    {
+        "year" : 2027,
+        "nuclear" : 0,
+        "wind solar" : 30.016,
+        "wind" : 23.881,
+        "solar" : 6.135,
+        "trillionBtuTotal" : 30.016,
+        "MWTotal" : 9.005000000000001
+    }
+
+    ,
+    {
+        "year" : 2028,
+        "nuclear" : 0,
+        "wind solar" : 30.247,
+        "wind" : 24.065,
+        "solar" : 6.182,
+        "trillionBtuTotal" : 30.247,
+        "MWTotal" : 9.074
+    }
+
+    ,
+    {
+        "year" : 2029,
+        "nuclear" : 0,
+        "wind solar" : 30.477,
+        "wind" : 24.248,
+        "solar" : 6.229,
+        "trillionBtuTotal" : 30.477,
+        "MWTotal" : 9.143000000000001
+    }
+
+    ,
+    {
+        "year" : 2030,
+        "nuclear" : 0,
+        "wind solar" : 30.708,
+        "wind" : 24.432,
+        "solar" : 6.276,
+        "trillionBtuTotal" : 30.708,
+        "MWTotal" : 9.212
+    }
+
+    ,
+    {
+        "year" : 2031,
+        "nuclear" : 0,
+        "wind solar" : 30.938,
+        "wind" : 24.615,
+        "solar" : 6.323,
+        "trillionBtuTotal" : 30.938,
+        "MWTotal" : 9.282
+    }
+
+    ,
+    {
+        "year" : 2032,
+        "nuclear" : 0,
+        "wind solar" : 31.169,
+        "wind" : 24.799,
+        "solar" : 6.37,
+        "trillionBtuTotal" : 31.169,
+        "MWTotal" : 9.351000000000001
+    }
+
+    ,
+    {
+        "year" : 2033,
+        "nuclear" : 0,
+        "wind solar" : 31.399,
+        "wind" : 24.982,
+        "solar" : 6.417,
+        "trillionBtuTotal" : 31.399,
+        "MWTotal" : 9.42
+    }
+
+    ,
+    {
+        "year" : 2034,
+        "nuclear" : 0,
+        "wind solar" : 31.63,
+        "wind" : 25.165,
+        "solar" : 6.465,
+        "trillionBtuTotal" : 31.63,
+        "MWTotal" : 9.489000000000001
+    }
+
+    ,
+    {
+        "year" : 2035,
+        "nuclear" : 0,
+        "wind solar" : 31.86,
+        "wind" : 25.349,
+        "solar" : 6.512,
+        "trillionBtuTotal" : 31.86,
+        "MWTotal" : 9.558
+    }
+
+    ,
+    {
+        "year" : 2036,
+        "nuclear" : 0,
+        "wind solar" : 32.091,
+        "wind" : 25.532,
+        "solar" : 6.559,
+        "trillionBtuTotal" : 32.091,
+        "MWTotal" : 9.627000000000001
+    }
+
+    ,
+    {
+        "year" : 2037,
+        "nuclear" : 0,
+        "wind solar" : 32.322,
+        "wind" : 25.716,
+        "solar" : 6.606,
+        "trillionBtuTotal" : 32.322,
+        "MWTotal" : 9.696
+    }
+
+    ,
+    {
+        "year" : 2038,
+        "nuclear" : 0,
+        "wind solar" : 32.552,
+        "wind" : 25.899,
+        "solar" : 6.653,
+        "trillionBtuTotal" : 32.552,
+        "MWTotal" : 9.766
+    }
+
+    ,
+    {
+        "year" : 2039,
+        "nuclear" : 0,
+        "wind solar" : 32.783,
+        "wind" : 26.083,
+        "solar" : 6.7,
+        "trillionBtuTotal" : 32.783,
+        "MWTotal" : 9.835000000000001
+    }
+
+    ,
+    {
+        "year" : 2040,
+        "nuclear" : 0,
+        "wind solar" : 33.013,
+        "wind" : 26.266,
+        "solar" : 6.747,
+        "trillionBtuTotal" : 33.013,
+        "MWTotal" : 9.904
+    }
+
+    ,
+    {
+        "year" : 2041,
+        "nuclear" : 0,
+        "wind solar" : 33.244,
+        "wind" : 26.449,
+        "solar" : 6.794,
+        "trillionBtuTotal" : 33.244,
+        "MWTotal" : 9.973000000000001
+    }
+
+    ,
+    {
+        "year" : 2042,
+        "nuclear" : 0,
+        "wind solar" : 33.474,
+        "wind" : 26.633,
+        "solar" : 6.841,
+        "trillionBtuTotal" : 33.474,
+        "MWTotal" : 10.042
+    }
+
+    ,
+    {
+        "year" : 2043,
+        "nuclear" : 0,
+        "wind solar" : 33.705,
+        "wind" : 26.816,
+        "solar" : 6.889,
+        "trillionBtuTotal" : 33.705,
+        "MWTotal" : 10.111
+    }
+
+    ,
+    {
+        "year" : 2044,
+        "nuclear" : 0,
+        "wind solar" : 33.935,
+        "wind" : 27,
+        "solar" : 6.936,
+        "trillionBtuTotal" : 33.935,
+        "MWTotal" : 10.181
+    }
+
+    ,
+    {
+        "year" : 2045,
+        "nuclear" : 0,
+        "wind solar" : 34.166,
+        "wind" : 27.183,
+        "solar" : 6.983,
+        "trillionBtuTotal" : 34.166,
+        "MWTotal" : 10.25
+    }
+
+    ,
+    {
+        "year" : 2046,
+        "nuclear" : 0,
+        "wind solar" : 34.396,
+        "wind" : 27.366,
+        "solar" : 7.03,
+        "trillionBtuTotal" : 34.396,
+        "MWTotal" : 10.319
+    }
+
+    ,
+    {
+        "year" : 2047,
+        "nuclear" : 0,
+        "wind solar" : 34.627,
+        "wind" : 27.55,
+        "solar" : 7.077,
+        "trillionBtuTotal" : 34.627,
+        "MWTotal" : 10.388
+    }
+
+    ,
+    {
+        "year" : 2048,
+        "nuclear" : 0,
+        "wind solar" : 34.857,
+        "wind" : 27.733,
+        "solar" : 7.124,
+        "trillionBtuTotal" : 34.857,
+        "MWTotal" : 10.457
+    }
+
+    ,
+    {
+        "year" : 2049,
+        "nuclear" : 0,
+        "wind solar" : 35.088,
+        "wind" : 27.917,
+        "solar" : 7.171,
+        "trillionBtuTotal" : 35.088,
+        "MWTotal" : 10.526
+    }
+
+    ,
+    {
+        "year" : 2050,
+        "nuclear" : 0,
+        "wind solar" : 35.319,
+        "wind" : 28.1,
+        "solar" : 7.218,
+        "trillionBtuTotal" : 35.319,
+        "MWTotal" : 10.596
+    }]
