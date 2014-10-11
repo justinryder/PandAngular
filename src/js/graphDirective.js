@@ -1,6 +1,6 @@
 app.directive('graph', [function($window) {
   return{
-    restrict: 'E',
+    restrict: 'EA',
     controller: 'graphController',
     scope: {
       chart: '='

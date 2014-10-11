@@ -1,4 +1,5 @@
 add_import_path "bower_components/foundation/scss"
+add_import_path "bower_components/fontawesome/scss"
 
 preferred_syntax = :scss
 http_path = '/'

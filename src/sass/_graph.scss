@@ -1,9 +1,30 @@
-.graph rect {
-  fill: steelblue;
+.controls {
+  width: 90%;
+  margin: 2em auto;
 }
 
-.graph text {
-  fill: white;
-  font: 10px sans-serif;
-  text-anchor: end;
+.graph-menu {
+  margin: 2em auto;
+  padding: 1em;
+}
+
+.data-point-line-type {
+  select {
+    width: 30%;
+    margin-right: 1rem;
+  }
+}
+
+.data-point-checkbox input {
+  margin-bottom: 0;
+}
+
+.data-point {
+  input {
+    margin-bottom: 0;
+  }
+
+  select {
+    margin-bottom: 0;
+  }
 }
