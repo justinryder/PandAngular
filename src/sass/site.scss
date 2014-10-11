@@ -1,5 +1,8 @@
 $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts" !default; // for referencing Bootstrap CDN font files directly
 
+$colors: #294018, #735D49, #D9CEC7, #A69185, #59352D;
+
+
 @import "reset";
 @import "foundation";
 @import "font-awesome";
