@@ -1,6 +1,21 @@
 app.controller('controlsController', ['$scope', '$http', function($scope, $http) {
+  $scope.types = ['line', 'spline', 'step', 'area', 'area-spline', 'area-step'];
+  $scope.type = 'area-spline';
+
+  $scope.$watch(function(scope){
+    return scope.type;
+  }, function(newValue){
+    for (var i in $scope.data.types) {
+      $scope.data.types[i] = newValue;
+    }
+    refreshChartData();
+  });
+
   $scope.data = {
-    columns: [],
+    x: 'x',
+    columns: [
+      ['x']
+    ],
     types: {}
   };
 
@@ -11,23 +26,29 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   }
 
   function loadRawData(source){
-    $http.get('/api/collections/raw?take=10&query=' + JSON.stringify({ Source: source })).success(function(data){
-      addDetailedClientDataSet(source, data, 'line');
+    $http.get('/api/collections/raw?take=100&query=' + JSON.stringify({ Source: source })).success(function(data){
+      addDetailedClientDataSet(source, data, $scope.type);
     });
   }
 
   function addDetailedClientDataSet(name, dataSet, type){
     var kwh_c = [],
-        kwh_g = [];
+        kwh_g = [],
+        dates = [];
     for (var i in dataSet){
       kwh_c.push(dataSet[i].kwh_c);
       kwh_g.push(dataSet[i].kwh_g);
+      var date = new Date(Date.parse(dataSet[i].dt));
+      dates.push(date);
     }
+    dates.unshift('x');
+    $scope.data.columns[0] = dates;
+
     var name_kwh_c = name + '_kwh_c',
         name_kwh_g = name + '_kwh_g';
     kwh_c.unshift(name_kwh_c);
     kwh_g.unshift(name_kwh_g);
-    console.log(dataSet, kwh_c, kwh_g);
+
     addDataSet(name_kwh_c, kwh_c, type);
     addDataSet(name_kwh_g, kwh_g, type);
   }
@@ -35,11 +56,17 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   function addDataSet(name, dataSet, type){
     $scope.data.columns.push(dataSet);
     $scope.data.types[name] = type;
-    $scope.chart.load($scope.data);
+    refreshChartData();
   }
 
   $scope.changeType = function(dataName, type){
     $scope.data.types[dataName] = type;
-    $scope.chart.load($scope.data);
+    refreshChartData();
   };
+
+  function refreshChartData(){
+    if ($scope.chart){
+      $scope.chart.load($scope.data);
+    }
+  }
 }]);
