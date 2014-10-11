@@ -19,6 +19,7 @@
   
 		<div ng-controller="controlsController" class="controls">
 			<div id="graph-main" chart="chart" data="data" graph></div>
+			<select ng-model="type" ng-options="type for type in types"></select>
 		</div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
