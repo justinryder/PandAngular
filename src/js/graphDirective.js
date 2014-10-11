@@ -1,11 +1,14 @@
 app.directive('graph', [function($window) {
   return{
-    restrict: 'EA',
+    restrict: 'E',
     controller: 'graphController',
+    scope: {
+      chart: '='
+    },
     link: function(scope, elem, attrs){
       var data = scope.data;
 
-      var chart = c3.generate({
+      scope.chart = c3.generate({
         bindto: '#' + elem.attr('id'),
         data: data
       });

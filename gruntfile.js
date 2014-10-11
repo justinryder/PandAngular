@@ -57,7 +57,8 @@ module.exports = function(grunt){
                     'app/js/app.js': [
                         'src/js/app.js',
                         'src/js/graphController.js',
-                        'src/js/graphDirective.js'
+                        'src/js/graphDirective.js',
+                        'src/js/controlsController.js'
                     ]
                 }
             }
