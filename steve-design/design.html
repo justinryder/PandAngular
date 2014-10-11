@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1.0', {'packages':['controls']});
+
+       google.setOnLoadCallback(drawDashboard);
+
+      function drawDashboard() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales',  'Expenses'],
+          [new Date(2004, 0, 1),    1000,    400],
+          [new Date(2005, 0, 1),    1170,    460],
+          [new Date(2006, 0, 1),    660,     1120],
+          [new Date(2007, 0, 1),    1030,    540]
+        ]);
+                
+        var dashboard = new google.visualization.Dashboard(
+            document.getElementById('dashboard_div'));
+
+        
+        var rangeSlider = new google.visualization.ControlWrapper({
+          'controlType': 'DateRangeFilter',
+          'containerId': 'filter_div',
+          'options': {
+            'filterColumnLabel': 'Year',
+            'ui': { 'format': { 'pattern': 'yyyy' } }
+          }
+        });
+
+
+        var options = {
+          title: 'Kilowatt Hours'
+        };
+        
+        var chart = new google.visualization.ChartWrapper({
+          'chartType': 'LineChart',
+          'containerId': 'chart_div',
+          'options': {
+            'legend': 'right',
+            'hAxis': {
+                'format': 'yyyy'
+            }
+          }
+        });
+
+        dashboard.bind(rangeSlider, chart);
+
+        dashboard.draw(data);
+
+      }
+    </script>
+    <style type="text/css">
+        #pledges
+        {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .pledge
+        {
+            width: 23%;
+            margin: 1% 10px;
+            float: left;
+            border: 1px solid;
+        }
+        .pledge:nth-child(4n)
+        {
+            clear: right;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="dashboard_div">
+        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        <div id="filter_div"></div>
+    </div>
+    <div id="pledges">
+        <div class="pledge">
+            <span class="name">Joe Schmoe</span>
+            <span class="">..?</span>
+        </div>
+        <div class="pledge">
+            <span class="name">Joe Schmoe</span>
+            <span class="">..?</span>
+        </div>
+        <div class="pledge">
+            <span class="name">Joe Schmoe</span>
+            <span class="">..?</span>
+        </div>
+        <div class="pledge">
+            <span class="name">Joe Schmoe</span>
+            <span class="">..?</span>
+        </div>
+        <div class="pledge">
+            <span class="name">Joe Schmoe</span>
+            <span class="">..?</span>
+        </div>
+        <div class="pledge">
+            <span class="name">Joe Schmoe</span>
+            <span class="">..?</span>
+        </div>
+        <div class="pledge">
+            <span class="name">Joe Schmoe</span>
+            <span class="">..?</span>
+        </div>
+        <div class="pledge">
+            <span class="name">Joe Schmoe</span>
+            <span class="">..?</span>
+        </div>
+    </div>
+  </body>
+</html>
