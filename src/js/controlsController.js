@@ -54,6 +54,7 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   };
 
   $scope.addProject = function(powerType, btuDelta, date, location, name) {
+    window.scrollTop();
     addEvent(powerType, btuDelta, date, location, name, true);
   };
 
@@ -70,7 +71,7 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   });
 
   function addPlannedEvents() {
-    addEvent('Solar', 1, 2023, 'Richmond', 'Super Solar', 'some description' false);
+    addEvent('Solar', 1, 2023, 'Richmond', 'Super Solar', 'some description', false);
     addEvent('Wind', 6, 2017, 'Middlebury', 'Epic Winds');
   }
 
