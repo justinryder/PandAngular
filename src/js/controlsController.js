@@ -11,7 +11,7 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   }
 
   function loadRawData(source){
-    $http.get('/api/collections/raw?take=10&query=' + JSON.stringify({ Source: source })).success(function(data){
+    $http.get('/api/collections/raw?take=50&query=' + JSON.stringify({ Source: source })).success(function(data){
       addDetailedClientDataSet(source, data, 'line');
     });
   }
@@ -27,7 +27,7 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
         name_kwh_g = name + '_kwh_g';
     kwh_c.unshift(name_kwh_c);
     kwh_g.unshift(name_kwh_g);
-    console.log(dataSet, kwh_c, kwh_g);
+
     addDataSet(name_kwh_c, kwh_c, type);
     addDataSet(name_kwh_g, kwh_g, type);
   }

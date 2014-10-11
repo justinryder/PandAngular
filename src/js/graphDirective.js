@@ -19,6 +19,13 @@ app.directive('graph', [function($window) {
           y: {
             label: 'kwh'
           }
+        },
+        data: data,
+        subchart: {
+          show: true
+        },
+        zoom: {
+          enabled: true
         }
       });
     }
