@@ -30,3 +30,23 @@ header {
     }
   }
 }
+
+.infoWrapper {
+  margin: 15px;
+  display: block;
+
+  section {
+    width: 50%;
+    padding: 10px;
+    float: left;
+  }
+
+  blockquote {
+    border: none;
+    margin-top: 25px;
+  }
+
+  legend {
+    margin-top: 10px;
+  }
+}
