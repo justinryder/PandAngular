@@ -11,7 +11,13 @@ app.directive('graph', [function($window) {
 
       scope.chart = c3.generate({
         bindto: '#' + elem.attr('id'),
-        data: data
+        data: data,
+        subchart: {
+          show: true
+        },
+        zoom: {
+          enabled: true
+        }
       });
     }
   };
