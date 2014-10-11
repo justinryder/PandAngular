@@ -1,6 +1,6 @@
 app.controller('controlsController', ['$scope', '$http', function($scope, $http) {
   $scope.types = ['line', 'spline', 'step', 'area', 'area-spline', 'area-step'];
-  $scope.type = $scope.types[0];
+  $scope.type = 'area-spline';
 
   $scope.$watch(function(scope){
     return scope.type;
@@ -56,7 +56,8 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   function addDataSet(name, dataSet, type){
     $scope.data.columns.push(dataSet);
     $scope.data.types[name] = type;
-    refreshChartData();  }
+    refreshChartData();
+  }
 
   $scope.changeType = function(dataName, type){
     $scope.data.types[dataName] = type;
