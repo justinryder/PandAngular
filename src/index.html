@@ -18,6 +18,7 @@
             <div class="panel" ng-repeat="event in events.Solar.concat(events.Wind)">
               <div>
                 <p>{{ event.type }}</p>
+                <p>{{ event.location }}</p>
                 <p>{{ event.btuDelta }}</p>
                 <p>{{ event.date }}</p>
               </div>
@@ -30,7 +31,6 @@
               <dl class="tabs" data-tab>
                 <dd class="active"><a href="#panel1">Wind</a></dd>
                 <dd><a href="#panel2">Solar</a></dd>
-                <dd><a href="#panel3">Nuclear</a></dd>
               </dl>
               <div class="tabs-content">
                 <div class="content active" id="panel1">

@@ -60,15 +60,16 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   });
 
   function addPlannedEvents() {
-    addEvent('Solar', 1, 2023);
-    addEvent('Wind', 6, 2017);
+    addEvent('Solar', 1, 2023, 'Richmond');
+    addEvent('Wind', 6, 2017, 'Middlebury');
   }
 
-  function addEvent(powerType, btuDelta, date){
+  function addEvent(powerType, btuDelta, date, location){
     var e = {
       type: powerType,
       btuDelta: btuDelta,
-      date: date
+      date: date,
+      location: location
     };
     $scope.events[powerType].push(e);
     applyEventsToChartData();
@@ -109,10 +110,6 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
         delete $scope.events[i][index];
       }
     }
-  };
-
-  $scope.addDummyEvent = function(){
-    addEvent('solar', 10, 2030);
   };
 
   var customers = ['detailed-service-client1', 'detailed-service-client2', 'detailed-service-client3', 'detailed-service-client4'];
