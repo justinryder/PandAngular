@@ -21,13 +21,29 @@
   background-color: transparentize(nth($colors, 3), 0.75);
   border-radius: 10px;
   box-shadow: 2px 2px 2px #ccc;
-  padding: 10px;
+  padding: 10px 10px 50px 10px;
   width: 90%;
+  margin-bottom: 25px;
+
 
   .type {
     position: absolute;
     top: 10px;
-    right: 30px;
+    right: 15px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    color: #fff;
+    font-weight: bold;
+
+    &[ng-class=Solar],
+    &.solar {
+      background-color: lighten($solarColor, 15%);
+    }
+
+    &[ng-class=Wind],
+    &.wind {
+      background-color: lighten($windColor, 25%);
+    }
   }
 
   dl {
@@ -52,7 +68,7 @@
 
   button {
     position: absolute;
-    bottom: 10px;
-    right: 30px;
+    bottom: -5px;
+    right: 15px;
   }
 }
