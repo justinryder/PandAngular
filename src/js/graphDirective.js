@@ -7,11 +7,9 @@ app.directive('graph', [function($window) {
       data: '='
     },
     link: function(scope, elem, attrs){
-      var data = scope.data;
-
       scope.chart = c3.generate({
         bindto: '#' + elem.attr('id'),
-        data: data,
+        data: scope.data,
         axis: {
           x: {
             label: 'hour',
@@ -26,7 +24,6 @@ app.directive('graph', [function($window) {
             label: 'kwh'
           }
         },
-        data: data,
         subchart: {
           show: true
         },
