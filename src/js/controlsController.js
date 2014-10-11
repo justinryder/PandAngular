@@ -50,9 +50,6 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     } else if(type === 'Solar') {
       btu = 1;
     }
-    console.log(btu, type,
-        $scope.proposedEvent.year,
-        $scope.proposedEvent.location);
     addEvent(type, btu,
         $scope.proposedEvent.year,
         $scope.proposedEvent.location,
@@ -61,7 +58,6 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   };
 
   $http.get('json/productionData.json').success(function(data){
-    console.log(data);
     dates = ['x'].concat(_.pluck(data, 'year'));
     nuclear = ['Nuclear'].concat(_.pluck(data, 'nuclear'));
     solar = ['Solar'].concat(_.pluck(data, 'solar'));
@@ -121,7 +117,8 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     for (var i in $scope.events){
       var index = $scope.events[i].indexOf(e);
       if (index > -1){
-        delete $scope.events[i][index];
+        $scope.events[i].splice(index, 1);
+        applyEventsToChartData();
       }
     }
   };
