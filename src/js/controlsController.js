@@ -163,7 +163,10 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     if ($scope.chart){
       $scope.chart.load($scope.data);
 
-      var gridLines = [{ value: new Date().getFullYear(), text: 'Today' }],
+      var gridLines = [
+          { value: 1972, text: 'VT Yankee Begins Operation' },
+          { value: new Date().getFullYear(), text: 'Today' }
+        ],
           events = $scope.events.Solar.concat($scope.events.Wind);
       for (var i in events){
         var e = events[i];
