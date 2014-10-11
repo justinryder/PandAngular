@@ -10,7 +10,7 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
     }
     refreshChartData();
   });
-
+  
   $scope.data = {
     x: 'x',
     columns: [
