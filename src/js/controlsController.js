@@ -77,13 +77,14 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   });
 
   function addPlannedEvents() {
-    addEvent('Solar', 1, 2023, 'Richmond', 'Super Solar', false);
+    addEvent('Solar', 1, 2023, 'Richmond', 'Super Solar', 'some description' false);
     addEvent('Wind', 6, 2017, 'Middlebury', 'Epic Winds');
   }
 
-  function addEvent(powerType, btuDelta, date, location, name, shouldRefresh){
+  function addEvent(powerType, btuDelta, date, location, name, description, shouldRefresh){
     var e = {
       name: name,
+      description: description,
       type: powerType,
       btuDelta: btuDelta,
       date: date,
