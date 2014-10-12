@@ -54,7 +54,6 @@ app.controller('controlsController', ['$scope', '$http', function($scope, $http)
   };
 
   $scope.addProject = function(powerType, btuDelta, date, location, name) {
-    window.scrollTop();
     addEvent(powerType, btuDelta, date, location, name, true);
   };
 
