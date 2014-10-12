@@ -1,7 +1,7 @@
 PandAngular
 ===========
 
-hackvt2014.justin-ryder.com
+[hackvt2014.justin-ryder.com](http://hackvt2014.justin-ryder.com/)
 
 A 24 hour hackathon entry for HackVT 2014.
 
